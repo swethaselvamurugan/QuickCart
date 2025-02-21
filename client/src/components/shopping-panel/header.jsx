@@ -62,7 +62,7 @@ function HeaderRightContent({ setOpenMenuSheet }) {
 
     console.log(cartItems, "Cart Items:")
 
-    return <div className="flex lg:items-center lg:flex-row flex-col gap-4 md:flex-row md:justify-center sm:flex-row sm:justify-center">
+    return <div className="flex items-center justify-center gap-4 lg:items-center lg:flex-row">
         <Sheet open={openCartSheet} onOpenChange={() => setOpenCartSheet(false)}>
             <Button onClick={() => setOpenCartSheet(true)} variant="outline" size="icon" className="relative"><ShoppingCart className="h-6 w-6" /><span className="absolute top-[-2px] right-[3px] font-bold text-sm">{cartItems?.items?.length || 0}</span><span className="sr-only">User Cart</span></Button>
             <USerCartWrapper setOpenCartSheet={setOpenCartSheet} setOpenMenuSheet={setOpenMenuSheet} cartItems={cartItems && cartItems.items && cartItems.items.length > 0 ? cartItems.items : []} />

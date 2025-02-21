@@ -81,7 +81,7 @@ function ProductDetailsDialog({ open, setOpen, productDetails }) {
 
     return (
         <Dialog open={open} onOpenChange={handleDialogClose}>
-            <DialogContent className="grid grid-cols-2 gap-8 sm:p-12 max-w-[90vw] sm:max-w-[80vw] lg:max-w-[70vw]">
+            <DialogContent className="grid grid-cols-2 gap-8 sm:p-12 max-w-[90vw] sm:max-w-[80vw] lg:max-w-[70vw] max-h-[100vh] overflow-auto">
                 <div className="relative overflow-hidden rounded-lg">
                     <img src={productDetails?.image} alt={productDetails?.title} width={600} height={600} className="aspect-square w-full object-cover" />
                 </div>
@@ -96,7 +96,7 @@ function ProductDetailsDialog({ open, setOpen, productDetails }) {
                             productDetails?.saleprice > 0 ? <p className="text-2xl font-bold text-muted-foreground">${productDetails?.saleprice}</p> : null
                         }
                     </div>
-                    <div className="flex items-center gap-2 mt-2">
+                    <div className="flex items-center gap-2 mt-2 overflow-auto">
                         <div className="flex items-center gap-0.5">
                             <StarRating rating={averageReview} />
                         </div>

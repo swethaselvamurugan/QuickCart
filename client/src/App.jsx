@@ -35,10 +35,10 @@ function App() {
 
   if (isLoading) return (
     <div className="flex flex-col space-y-3 justify-center items-center h-screen">
-      <Skeleton className="h-[400px] w-[800px] rounded-xl" />
+      <Skeleton className="h-[400vw] w-[800vw] rounded-xl" />
       <div className="space-y-2">
-        <Skeleton className="h-4 w-[600px]" />
-        <Skeleton className="h-4 w-[550px]" />
+        <Skeleton className="h-[16vw] w-[600vw]" />
+        <Skeleton className="h-[16vw] w-[550vw]" />
       </div>
     </div>
   )

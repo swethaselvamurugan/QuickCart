@@ -33,15 +33,16 @@ function App() {
     dispatch(checkAuth(token));
   }, [dispatch]);
 
-  if (isLoading) return (
-    <div className="flex flex-col space-y-3 justify-center items-center h-screen">
-      <Skeleton className="h-[25vw] w-[45vw] rounded-xl" />
-      <div className="space-y-2">
-        <Skeleton className="h-[1vw] w-[35vw]" />
-        <Skeleton className="h-[1vw] w-[30vw]" />
+  if (isLoading)  
+    return (
+      <div className="flex flex-col space-y-2 justify-center items-center h-screen">
+        <Skeleton className="rounded-xl h-[50%] w-[80%]" />
+        <div className="flex flex-col space-y-2 justify-center items-center w-full">
+          <Skeleton className="h-[20px] w-[70%]" />
+          <Skeleton className="h-[20px] w-[50%]" />
+        </div>
       </div>
-    </div>
-  )
+    )
 
   return (
     <div className='flex flex-col overflow-hidden bg-white'>
